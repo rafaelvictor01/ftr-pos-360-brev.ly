@@ -11,9 +11,15 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
+    "@react-router/node": "^7.13.1",
+    "@react-router/serve": "^7.13.1",
     "@tailwindcss/vite": "^4.2.1",
+    "isbot": "^5.1.35",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-router": "^7.13.1",
+    "tailwind-variants": "^3.2.2",
     "tailwindcss": "^4.2.1"
   },
   "devDependencies": {
