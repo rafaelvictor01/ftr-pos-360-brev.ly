@@ -1,7 +1,9 @@
 export function AppWrapper() {
   return (
     <main className="h-dvh flex flex-col items-center justify-center p-10">
-      <div className="text-3xl font-bold underline">Hello World</div>
+      <div className="text-3xl font-bold underline bg-blue-dark">
+        Hello World
+      </div>
     </main>
   )
 }
