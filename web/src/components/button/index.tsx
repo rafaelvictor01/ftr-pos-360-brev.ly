@@ -36,17 +36,10 @@ export function Button(props: ButtonProps) {
       {isLoading && (
         <div
           className={`w-6 h-6 border-2 ${loadingColor} border-t-white/40 rounded-full animate-spin`}
-          data-testid="button-loading"
         />
       )}
 
-      {Icon && !isLoading && (
-        <Icon
-          size="1rem"
-          color="var(--color-gray-600)"
-          data-testid="button-icon"
-        />
-      )}
+      {Icon && !isLoading && <Icon size="1rem" color="var(--color-gray-600)" />}
 
       {props.children}
     </button>

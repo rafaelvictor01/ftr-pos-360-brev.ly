@@ -80,10 +80,7 @@ export function Input(props: InputProps) {
       />
 
       {props.fixedPlaceholder && (
-        <span
-          data-testid={`${props.id}-fixed-placeholder`}
-          className="absolute top-18.5 left-8.5 text-md text-gray-400 font-normal z-1 pointer-events-none"
-        >
+        <span className="absolute top-18.5 left-8.5 text-md text-gray-400 font-normal z-1 pointer-events-none">
           {props.fixedPlaceholder}
         </span>
       )}
