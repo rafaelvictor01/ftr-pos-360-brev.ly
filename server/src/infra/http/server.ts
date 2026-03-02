@@ -10,8 +10,7 @@ import {
 } from "fastify-type-provider-zod"
 
 import { env } from "@/env"
-
-import { appRoutes } from "./routes"
+import { appRoutes } from "@/routes"
 
 const server = fastify()
 
