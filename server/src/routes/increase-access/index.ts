@@ -5,7 +5,7 @@ import { isRight, unwrapEither } from "@/utils/either"
 
 import { increaseAccessShortenedLinksSchema } from "./schema"
 
-const PATH = "/shortened-links/increase-access/:shortenedLinkId"
+const PATH = "/shortened-links/increase-access/:shortenedLink"
 
 export const increaseAccessShortenedLinks: FastifyPluginAsyncZod = async (
   server,
@@ -14,9 +14,9 @@ export const increaseAccessShortenedLinks: FastifyPluginAsyncZod = async (
     PATH,
     increaseAccessShortenedLinksSchema,
     async (request, reply) => {
-      const shortenedLinkId = request.params.shortenedLinkId
+      const shortenedLink = request.params.shortenedLink
 
-      const result = await updateAccessQuantity(shortenedLinkId)
+      const result = await updateAccessQuantity(shortenedLink)
 
       if (isRight(result)) {
         const { originalLink, shortenedLink, quantityAccesses } =

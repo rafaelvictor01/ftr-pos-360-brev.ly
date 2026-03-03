@@ -7,7 +7,7 @@ import { schemas } from "@/infra/db/schemas"
 import { Either, makeLeft, makeRight } from "@/utils/either"
 
 export async function updateAccessQuantity(
-  shortenedLinkId: string,
+  shortenedLink: string,
 ): Promise<Either<ShortenedLinkNotAvailable, UpdateAccessQuantitySchemaDTO>> {
   const shortenedLinksSchema = schemas.shortenedLinks
 
@@ -16,7 +16,7 @@ export async function updateAccessQuantity(
     .set({
       quantityAccesses: sql`${shortenedLinksSchema.quantityAccesses} + 1`,
     })
-    .where(eq(shortenedLinksSchema.id, shortenedLinkId))
+    .where(eq(shortenedLinksSchema.shortenedLink, shortenedLink))
     .returning({
       originalLink: shortenedLinksSchema.originalLink,
       shortenedLink: shortenedLinksSchema.shortenedLink,

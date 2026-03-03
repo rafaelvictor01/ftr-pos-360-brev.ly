@@ -5,7 +5,7 @@ export const increaseAccessShortenedLinksSchema = {
     summary: "Update access quantity",
     tags: ["Shortened Links"],
     params: z.object({
-      shortenedLinkId: z.string(),
+      shortenedLink: z.string(),
     }),
     response: {
       200: z
