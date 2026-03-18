@@ -12,7 +12,6 @@ export const routes = createBrowserRouter([
       { index: true, element: <HomePage /> },
       {
         path: "/r/:shortCode",
-        // loader: checkOriginalUrlLoader,
         element: <RedirectHandler />,
       },
       { path: "*", element: <NotFound /> },

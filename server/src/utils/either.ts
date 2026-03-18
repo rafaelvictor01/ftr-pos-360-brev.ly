@@ -18,6 +18,7 @@ export const isRight = <T, U>(e: Either<T, U>): e is Right<U> => {
   return e.right !== undefined
 }
 
+// eslint-disable-next-line no-unused-vars
 export type UnwrapEither = <T, U>(e: Either<T, U>) => NonNullable<T | U>
 
 export const unwrapEither: UnwrapEither = <T, U>({
